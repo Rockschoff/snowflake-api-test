@@ -24,7 +24,7 @@ class SnowflakeDatabase:
 
             return engine
         except Exception as e:
-            raise f"Unable to initalize snowflake database : {e}"
+            raise Exception(f"Unable to initalize snowflake database : {e}")
 
 
     def get_dataframe_from_snowflake(self , sql)->pd.DataFrame:

@@ -5,3 +5,4 @@ uuid
 openai
 tiktoken
 pydantic
+pymongo

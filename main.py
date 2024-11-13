@@ -7,9 +7,7 @@ from random import randint
 import altair as alt
 import time
 _LOREM_IPSUM = """
-Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Chat History is not avaliable.
 """
 def stream_data():
     for word in _LOREM_IPSUM.split(" "):
@@ -49,7 +47,7 @@ if question := st.chat_input("What how many constomer comlplaints have I been ge
                     # for chunk in st.session_state["DataBot"].get_graph_heading(response["sql"] , response["dataframe"]):
                     #     st.write(chunk)
                     st.write_stream(st.session_state["DataBot"].get_graph_heading(response["sql"] , response["dataframe"]))
-                    st.code(response["sql"] , language="sql")
+                    # st.code(response["sql"] , language="sql")
                     st.altair_chart(response["chart"] , use_container_width=True)
                     st.write_stream(st.session_state["DataBot"].get_recommendations(response["sql"] , response["dataframe"]))
                 

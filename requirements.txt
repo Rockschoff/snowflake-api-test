@@ -6,3 +6,5 @@ openai
 tiktoken
 pydantic
 pymongo
+snowflake-sqlalchemy
+snowflake-connector-python
